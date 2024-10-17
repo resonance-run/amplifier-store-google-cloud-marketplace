@@ -1,0 +1,34 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: '$APP_INSTANCE_NAME'
+  annotations:
+    kubernetes-engine.cloud.google.com/icon:
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: 'amplifier-store'
+    componentKinds:
+      - group: v1
+        kind: Service
+    addOwnerRef: true
+    descriptor:
+      type: 'amplifier-store'
+      keywords:
+        - 'customization'
+        - 'cache'
+        - 'a/b testing'
+      links:
+        - description: About
+          url: 'https://www.resonance.run/about'
+      description: 'Amplifier Store allows you to add customizations to your digital experiences. For more info see https://www.resonance.run/'
+      maintainers:
+        - name: Steven Foote
+          email: steven@resonance.run
+        - name: Michael Pascual
+          email: michael@resonance.run
+      owners:
+        - name: Steven Foote
+          email: steven@resonance.run
+        - name: Michael Pascual
+          email: michael@resonance.run
