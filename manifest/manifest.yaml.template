@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $name-server
+spec:
+  selector:
+    matchLabels:
+      run: $name-app
+  # Replicas was a property defined in schema.yaml. Its value will be
+  # substituted into $replicas
+  replicas: $replicas
+  template:
+    metadata:
+      labels:
+        run: $name-app
+    spec:
+      containers:
+        - name: amplifier-store
+          image: $imageFull
+          ports:
+            - containerPort: 80

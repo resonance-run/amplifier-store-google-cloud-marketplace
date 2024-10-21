@@ -3,9 +3,9 @@ x-google-marketplace:
 
   applicationApiVersion: v1beta1
 
-  publishedVersion: '$TAG'
+  publishedVersion: '0.0.1'
   publishedVersionMetadata:
-    releaseNotes: >-
+    releaseNote: >-
       Initial release
     releaseTypes:
       - Feature
@@ -28,22 +28,27 @@ properties:
     type: string
     x-google-marketplace:
       type: NAMESPACE
-  resonanceClientId:
+  replicas:
+    type: integer
+    title: Amplifier Store replica count
+    description: The number of Amplifier Store replicas to deploy
+  resonance.clientId:
     type: string
-    x-google-marketplace:
-      type: RESONANCE_CLIENT_ID
-  resonanceApiKey:
+    title: Resonance Client ID
+    description: Enter the Resonance Client ID found in the Resonance Developer Settings
+  resonance.apiKey:
     type: string
-    x-google-marketplace:
-      type: RESONANCE_API_KEY
+    title: Resonance API Key
+    description: Enter the Resonance API Key generated in the Resonance Developer Settings
   resonance.redisUrl:
     type: string
-    x-google-marketplace:
-      type: REDIS_URL
+    title: Redis URL
+    description: Enter the URL of the Redis DB that will be used with this amplifier store
 
 required:
   - name
   - namespace
-  - resonanceClientId
-  - resonanceApiKey
+  - replicas
+  - resonance.clientId
+  - resonance.apiKey
   - resonance.redisUrl
