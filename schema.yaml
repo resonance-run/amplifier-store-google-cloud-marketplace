@@ -40,6 +40,8 @@ properties:
     type: string
     title: Resonance API Key
     description: Enter the Resonance API Key generated in the Resonance Developer Settings
+    x-google-marketplace:
+      type: MASKED_FIELD
   resonance.redisUrl:
     type: string
     title: Redis URL

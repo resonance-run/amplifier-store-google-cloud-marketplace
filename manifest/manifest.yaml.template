@@ -19,3 +19,10 @@ spec:
           image: $imageFull
           ports:
             - containerPort: 80
+          env:
+            - name: RESONANCE_CLIENT_ID
+              value: $resonance.clientId
+            - name: RESONANCE_API_KEY
+              value: $resonance.apiKey
+            - name: REDIS_URL
+              value: $resonance.redisUrl
