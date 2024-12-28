@@ -31,6 +31,7 @@ properties:
   replicas:
     type: integer
     title: Amplifier Store replica count
+    default: 3
     description: The number of Amplifier Store replicas to deploy
   resonance.clientId:
     type: string

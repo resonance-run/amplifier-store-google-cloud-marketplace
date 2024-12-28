@@ -1,7 +1,7 @@
 actions:
   - name: The healthcheck endpoint is live
     bashTest:
-      script: curl -f "http://$APP_INSTANCE_NAME-amplifier-store-svc:5432"
+      script: curl -f "http://${APP_INSTANCE_NAME}-amplifier-store-svc:5432/healthcheck"
       expect:
         stdOut:
           contains: 'success:true'
