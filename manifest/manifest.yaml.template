@@ -21,8 +21,8 @@ spec:
             - containerPort: 80
           env:
             - name: RESONANCE_CLIENT_ID
-              value: $resonance.clientId
+              value: $resonanceClientId
             - name: RESONANCE_API_KEY
-              value: $resonance.apiKey
+              value: $resonanceApiKey
             - name: REDIS_URL
-              value: $resonance.redisUrl
+              value: $resonanceRedisUrl

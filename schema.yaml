@@ -3,7 +3,7 @@ x-google-marketplace:
 
   applicationApiVersion: v1beta1
 
-  publishedVersion: '0.0.1'
+  publishedVersion: '0.0.2'
   publishedVersionMetadata:
     releaseNote: >-
       Initial release
@@ -33,25 +33,28 @@ properties:
     title: Amplifier Store replica count
     default: 3
     description: The number of Amplifier Store replicas to deploy
-  resonance.clientId:
+  resonanceClientId:
     type: string
     title: Resonance Client ID
+    default: 'mock-client-id'
     description: Enter the Resonance Client ID found in the Resonance Developer Settings
-  resonance.apiKey:
+  resonanceApiKey:
     type: string
     title: Resonance API Key
+    default: 'mock-api-key'
     description: Enter the Resonance API Key generated in the Resonance Developer Settings
     x-google-marketplace:
       type: MASKED_FIELD
-  resonance.redisUrl:
+  resonanceRedisUrl:
     type: string
     title: Redis URL
+    default: 'redis://mock-redis-url'
     description: Enter the URL of the Redis DB that will be used with this amplifier store
 
 required:
   - name
   - namespace
   - replicas
-  - resonance.clientId
-  - resonance.apiKey
-  - resonance.redisUrl
+  - resonanceClientId
+  - resonanceApiKey
+  - resonanceRedisUrl

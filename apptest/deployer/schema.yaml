@@ -4,12 +4,12 @@ properties:
     default: $REGISTRY/tester:$TAG
     x-google-property:
       type: IMAGE
-  resonance.clientId:
+  resonanceClientId:
     type: string
     default: 'mock-client-id'
-  resonance.apiKey:
+  resonanceApiKey:
     type: string
     default: 'mock-api-key'
-  resonance.redisUrl:
+  resonanceRedisUrl:
     type: string
     default: 'redis://mock-redis-url'
